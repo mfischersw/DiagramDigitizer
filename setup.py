@@ -12,6 +12,10 @@ setup(
     package_dir={'': 'src'},
     packages=find_packages(where='src'),
     python_requires='>=3.6, <4',
+    install_requires=[
+        'numpy',
+        'xlsxwriter'
+    ],
     entry_points={  # Optional
         'console_scripts': [
             'DiagramDigitizer=DiagramDigitizer:main',
