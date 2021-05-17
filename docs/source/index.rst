@@ -6,7 +6,8 @@
 Software for data extraction from plots and images
 ==================================================
 
-DiagramDigitizer is an easy-to-use tool to extract numerical data from plots and images and export them for further use.
+DiagramDigitizer is an easy-to-use tool to extract numerical data from plots and images and export them for further
+use.
 
 DiagramDigitizer has the following capabilities:
 
@@ -23,12 +24,14 @@ Everybody is welcome to use DiagramDigitizer.
 Audience
 --------
 
-The audience for DiagramDigitizer includes engineers, mathematicians, physicists, biologists, and anyone else who intends to convert plots into numerical data.
+The audience for DiagramDigitizer includes engineers, mathematicians, physicists, biologists, and anyone else
+who intends to convert plots into numerical data.
 
-Free software
--------------
+Open source software
+--------------------
 
-DiagramDigitizer is free software; you can redistribute it and/or modify it under the terms of the :doc:`MIT </license>`.
+DiagramDigitizer is open source software; you can redistribute it and/or modify it under the terms of
+the :doc:`GPL-3.0 </license>`.
 
 History
 -------
@@ -38,11 +41,28 @@ DiagramDigitizer was born in January 2016. The software was designed and written
 Installation
 ------------
 
-DiagramDigitizer requires Python 3.6, 3.7, or 3.8. Within a working Python environment, it can be installed using ``pip``.
+DiagramDigitizer requires Python 3.6, 3.7, or 3.8 and builds upon PyQt5. It can be installed from Anaconda prompt
+using ``pip``.
 
 .. code:: bash
 
     pip install diagramdigitizer
+
+Quick start
+-----------
+
+After installation DiagramDigitizer can be started from Anaconda prompt by
+
+.. code:: bash
+
+    diagramdigitizer
+
+or from Python prompt by
+
+.. code:: python
+
+    >>> import diagramdigitizer
+    >>> diagramdigitizer.diagramdigitizer.run()
 
 Tutorial
 --------

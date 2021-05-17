@@ -32,13 +32,13 @@ release = '0.0.0'
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
-	'sphinx.ext.autosummary',
+    'sphinx.ext.autosummary',
     'sphinx.ext.doctest',
     'sphinx.ext.todo',
     'sphinx.ext.coverage',
     'sphinx.ext.mathjax',
     'sphinx.ext.ifconfig',
-    'sphinx.ext.viewcode',
+    'sphinx.ext.viewcode'
 ]
 
 # generate autosummary pages
