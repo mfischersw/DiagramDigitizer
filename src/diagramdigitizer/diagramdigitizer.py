@@ -115,9 +115,6 @@ class DDMainWindow(QtWidgets.QMainWindow):
         self.ui.buttonExportCsvFile.clicked.connect(partial(self.exportToFile, "csv"))
         self.ui.buttonExportExcelFile.clicked.connect(partial(self.exportToFile, "excel"))
 
-        # Info
-        self.ui.buttonDocu.clicked.connect(self.show_docu)
-
         # Mouse
         self.__graphicsScene.mouseMovedSignal.connect(self.updateMouseCoords)
 
@@ -435,24 +432,6 @@ class DDMainWindow(QtWidgets.QMainWindow):
             except:
                 pass
 
-    @QtCore.pyqtSlot()
-    def show_docu(self):
-
-        documentation_name = 'Documentation_DiagramDigitizer.pdf'
-
-        if getattr(sys, 'frozen', False):
-            application_path = os.path.dirname(sys.executable)
-        elif __file__:
-            application_path = os.path.dirname(__file__)
-
-        documentation_path = os.path.join(application_path, documentation_name)
-
-        try:
-            QtGui.QDesktopServices.openUrl(QtCore.QUrl("file:///" + documentation_path, QtCore.QUrl.TolerantMode))
-        except:
-            # ...
-            pass
-
     @QtCore.pyqtSlot(str, str)
     def updateMouseCoords(self, xStr, yStr):
 
@@ -473,8 +452,7 @@ class DDMainWindow(QtWidgets.QMainWindow):
         zoomFac = self.calcZoomFactor()
 
         self.ui.labelZoomFactor.setText(str(int(zoomFac * 100)) + " %")
-        ###???
-        matrix = QtGui.QTransform()  # identity matrix
+        matrix = QtGui.QTransform()
         matrix.scale(zoomFac, zoomFac)
         self.__graphicsView.setTransform(matrix)
 

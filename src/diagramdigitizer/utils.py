@@ -7,11 +7,8 @@
 .. moduleauthor:: Michael Fischer
 """
 
-
-
+# Imports
 import numpy
-
-
 
 # Constants
 DATASETTAG = "set"
@@ -23,19 +20,18 @@ DATA_DICT_PART = 1
 DATA_DICT_FILLED = 2
 
 
-
 def sortNameListWithTag(nameList):
-    """Sort list of entries [DATASETTAG][number] according to number.
+    """Sort list of entries [str][number] according to number.
 
     Parameters
     ----------
-    nameList : list (str)
-        List of entries [DATASETTAG][number].
+    nameList : list
+        List of entries [str][number].
 
     Returns
     -------
-    out : list (str)
-        Sorted list of entries [DATASETTAG][number].
+    out : list
+        Sorted list of entries [str][number].
 
     Example
     -------
@@ -63,14 +59,13 @@ def sortNameListWithTag(nameList):
     return nameListOut
 
 
-
 def contentStatusDict(dataDict):
     """Content status (empty, no content, partially filled, filled) of data dictionary { str1 : numpy-array1, ...}.
 
     Parameters
     ----------
     dataDict : dict
-        Data dictionary { TAG1 : numpy-array1, ...}.
+        Data dictionary { str1 : numpy-array1, ...}.
 
     Returns
     -------
@@ -81,6 +76,7 @@ def contentStatusDict(dataDict):
     -------
     Basic example.
 
+    >>> import numpy
     >>> from diagramdigitizer import utils
     >>> dataDict = {}
     >>> utils.contentStatusDict(dataDict)
@@ -114,7 +110,6 @@ def contentStatusDict(dataDict):
             return DATA_DICT_FILLED
 
 
-
 def sortArrDataDict(dataDict):
     """Sort (x,y)-coordinate arrays within data dictionary { str1 : numpy-array1, ...} according to x-values in
     ascending order.
@@ -122,17 +117,18 @@ def sortArrDataDict(dataDict):
     Parameters
     ----------
     dataDict : dict
-        Data dictionary { TAG1 : numpy-array1, ...}.
+        Data dictionary { str1 : numpy-array1, ...}.
 
     Returns
     -------
     out : dict
-        Data dictionary { TAG1 : sorted-numpy-array1, ...}.
+        Data dictionary { str1 : sorted-numpy-array1, ...}.
 
     Example
     -------
     Basic example.
 
+    >>> import numpy
     >>> from diagramdigitizer import utils
     >>> arr1 = numpy.array([[1., 1.], [3., 2.], [4., 3.], [2., 4.]])
     >>> arr2 = numpy.array([[8., 4.], [5., 5.], [4., 6.], [7., 7.]])
@@ -169,14 +165,13 @@ def sortArrDataDict(dataDict):
     return dataDictNew
 
 
-
 def trafoDictKeys(dataDict):
-    """Transform dictionary keys from [DATASETTAG][number] to [number].
+    """Transform dictionary keys from [str][number] to [number].
 
     Parameters
     ----------
     dataDict : dict
-        Data dictionary { TAG1 : data, ...}.
+        Data dictionary { str1 : data, ...}.
 
     Returns
     -------

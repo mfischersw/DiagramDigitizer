@@ -46,11 +46,12 @@ def interpolateDataDict(dataDict, nintp):
     -------
     Basic example.
 
+    >>> import numpy
     >>> from diagramdigitizer import export
     >>> arr1 = numpy.array([[1., 1.], [3., 2.], [4., 3.], [2., 4.]])
     >>> arr2 = numpy.array([[8., 4.], [5., 5.], [4., 6.], [7., 7.]])
     >>> dataDict = { 'set1' : arr1, 'set2' : arr2 }
-    >>> interpolateDataDict(dataDict, 9)
+    >>> export.interpolateDataDict(dataDict, 9)
     {'set1': array([[1.    , 1.    ],
         [1.125 , 1.0625],
         [1.25  , 1.125 ],
@@ -97,7 +98,7 @@ def exportData_to_text(filepath, dataDict, deli):
     Parameters
     ----------
     filepath : str
-        Data dictionary { str1 : numpy-array1, ...}.
+        File path.
     dataDict : dict
         Data dictionary { str1 : numpy-array1, ...}.
     deli : str
@@ -138,7 +139,7 @@ def exportData_to_excel(filepath, dataDict):
     Parameters
     ----------
     filepath : str
-        Data dictionary { str1 : numpy-array1, ...}.
+        File path.
     dataDict : dict
         Data dictionary { str1 : numpy-array1, ...}.
     """
@@ -223,7 +224,7 @@ def exportData_to_fileGen(filepath, dataDict, filetype, procType):
     Parameters
     ----------
     filepath : str
-        Data dictionary { str1 : numpy-array1, ...}.
+        File path.
     dataDict : dict
         Data dictionary { str1 : numpy-array1, ...}.
     filetype: str

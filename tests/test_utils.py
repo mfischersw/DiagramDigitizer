@@ -12,14 +12,12 @@ from src.diagramdigitizer.utils import sortArrDataDict
 from src.diagramdigitizer.utils import trafoDictKeys
 
 
-
 class Test_sortNameListWithTag(unittest.TestCase):
 
     def test_sortNameListWithTag(self):
         testList = ['set2', 'set4', 'set1', 'set13', 'set12']
         expectedList = ['set1', 'set2', 'set4', 'set12', 'set13']
         self.assertListEqual(sortNameListWithTag(testList), expectedList)
-
 
 
 class Test_contentStatusDict(unittest.TestCase):
@@ -39,7 +37,6 @@ class Test_contentStatusDict(unittest.TestCase):
     def test_contentStatusDict_empty(self):
         dataDict = { 'set1' : numpy.array([1.0, 2.0]), 'set2' : numpy.array([3.0, 4.0]) }
         self.assertEqual(contentStatusDict(dataDict), DATA_DICT_FILLED)
-
 
 
 class Test_sortArrDataDict(unittest.TestCase):
@@ -69,15 +66,9 @@ class Test_sortArrDataDict(unittest.TestCase):
         self.assertListEqual(res2_y, expectedRes2_y)
 
 
-
 class Test_trafoDictKeys(unittest.TestCase):
 
     def test_trafoDictKeys(self):
         dataDict = {'set1': 1.0, 'set2': 2.0}
         expectedList = [1, 2]
         self.assertListEqual(sorted(trafoDictKeys(dataDict).keys()), expectedList)
-
-
-
-if __name__ == '__main__':
-    unittest.main()
