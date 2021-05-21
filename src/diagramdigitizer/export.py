@@ -143,7 +143,8 @@ def exportData_to_excel(filepath, dataDict):
     dataDict : dict
         Data dictionary { str1 : numpy-array1, ...}.
     """
-    try:
+    #try:
+    if True:
         # Open Excel workbook
         workbook = xlsxwriter.Workbook(filepath)
         workbook.add_format({'bold': True})
@@ -213,8 +214,8 @@ def exportData_to_excel(filepath, dataDict):
         # Close Excel workbook
         workbook.close()
 
-    except OSError as e:
-        print("OS ERROR: ", e.errno)
+    #except OSError as e:
+    #    print("OS ERROR: ", e.errno)
 
 
 def exportData_to_fileGen(filepath, dataDict, filetype, procType):
@@ -237,11 +238,11 @@ def exportData_to_fileGen(filepath, dataDict, filetype, procType):
     elif (procType == PROCESSING_TYPE_ISORT):
         dataDicth = utils.sortArrDataDict(dataDict)
     elif (procType == PROCESSING_TYPE_INTERP):
-        dataDicth = interpolateDataDict(utils.sortArrDataDict(dataDict))
+        dataDicth = interpolateDataDict(utils.sortArrDataDict(dataDict), NINTERP)
 
-    if (type == "text"):
+    if (filetype == "text"):
         exportData_to_text(filepath, dataDicth, "\t")
-    elif (type == "csv"):
+    elif (filetype == "csv"):
         exportData_to_text(filepath, dataDicth, ";")
-    elif (type == "excel"):
+    elif (filetype == "excel"):
         exportData_to_excel(filepath, dataDicth)
