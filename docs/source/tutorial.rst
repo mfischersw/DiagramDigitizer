@@ -35,7 +35,7 @@ The navigation menu contains the following submenus:
 * **Axes**: Define the axes limits (*x0*, *x1*, *y0*, *y1*) as well as axes scales (linear/logarithmic).
 * **Data**: Digitize each curve within the diagram.
 * **Export**: Process data (ordering, interpolation) and export the numerical data to different file types (Text, CSV, Excel).
-* **Info**: Show this documentation.
+* **Info**: Info.
 * **Quit**: Exit DiagramDigitizer.
 
 Navigation within DiagramDigitizer proceeds always via the navigation menu, which can be reached from each submenu using
@@ -66,7 +66,7 @@ placed using *left* mouse button.
 .. figure:: images/use_axes.png
     :align: left
 
-    Figure 2: Submenu Axes of DiagramDigitizer: Defining an axis limit (here: *x0* - the corresponding axis limit button
+    Figure 2: Submenu **Axes** of DiagramDigitizer: Defining an axis limit (here: *x0* - the corresponding axis limit button
     is active).
 
 Once the axes definition has been completed, the axes are shown within the diagram (see Figure 3). The axes definition
@@ -75,7 +75,7 @@ can be cleared using the **Clear axes** button.
 .. figure:: images/use_axes_compl.png
     :align: left
 
-    Figure 3: Submenu Axes of DiagramDigitizer: Completed axes definition.
+    Figure 3: Submenu **Axes** of DiagramDigitizer: Completed axes definition.
 
 In addition, the scale of each axes can be set: linear or logarithmic scale.
 
@@ -93,7 +93,7 @@ can switch between the different sets to add/remove data points or remove a data
 .. figure:: images/use_data.png
     :align: left
 
-    Figure 4: Submenu Data of DiagramDigitizer: data extraction.
+    Figure 4: Submenu **Data** of DiagramDigitizer: data extraction.
 
 The actual coordinates within the diagram are displayed as well in order to support the digitization procedure.
 

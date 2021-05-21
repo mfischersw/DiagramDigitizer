@@ -27,8 +27,10 @@ Audience
 The audience for DiagramDigitizer includes engineers, mathematicians, physicists, biologists, and anyone else
 who intends to convert plots into numerical data.
 
-Open source software
---------------------
+License
+-------
+
+Copyright (C) 2016-2021 Michael Fischer.
 
 DiagramDigitizer is open source software; you can redistribute it and/or modify it under the terms of
 the :doc:`GPL-3.0 </license>`.
