@@ -37,7 +37,7 @@ License
 Copyright (C) 2016-2021 Michael Fischer.
 
 DiagramDigitizer is open source software; you can redistribute it and/or modify it under the terms of
-the :doc:`GPL-3.0 </license>`.
+the GPL-3.0 license.
 
 
 
