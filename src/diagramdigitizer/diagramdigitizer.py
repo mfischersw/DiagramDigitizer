@@ -217,8 +217,8 @@ class DDMainWindow(QtWidgets.QMainWindow):
                 self.updateDataSetListFromScene()
                 self.initRadioButtonsExport()
 
-            except:
-                pass
+            except Exception as e:
+                print(str(e))
 
     @QtCore.pyqtSlot()
     def saveProject(self):
@@ -227,8 +227,8 @@ class DDMainWindow(QtWidgets.QMainWindow):
         if (fileName and (len(fileName[0]) > 0)):
             try:
                 self.__graphicsScene.saveScene(fileName[0])
-            except:
-                pass
+            except Exception as e:
+                print(str(e))
 
     @QtCore.pyqtSlot()
     def loadProject(self):
@@ -243,8 +243,8 @@ class DDMainWindow(QtWidgets.QMainWindow):
                 self.updateDataSetListFromScene()
                 self.initRadioButtonsExport()
 
-            except:
-                pass
+            except Exception as e:
+                print(str(e))
 
     def updateAxesLineEditsFromScene(self):
 
@@ -342,8 +342,8 @@ class DDMainWindow(QtWidgets.QMainWindow):
                 elif (axisFlag == "Y1"):
                     self.__graphicsScene.set_y1Real(val)
 
-            except:
-                pass
+            except Exception as e:
+                print(str(e))
 
     def uncheckAxisButtons(self):
 
@@ -429,8 +429,8 @@ class DDMainWindow(QtWidgets.QMainWindow):
             try:
                 dictRealCoords = self.__graphicsScene.determineDataPointsRealCoords()
                 export.exportData_to_fileGen(fileName[0], dictRealCoords, fileFlag, self.determineProcType())
-            except:
-                pass
+            except Exception as e:
+                print(str(e))
 
     @QtCore.pyqtSlot(str, str)
     def updateMouseCoords(self, xStr, yStr):

@@ -1068,7 +1068,7 @@ class Ui_MainWindow(object):
         self.buttonExportCsvFile.setText(_translate("MainWindow", "Export to csv file"))
         self.buttonExportExcelFile.setText(_translate("MainWindow", "Export to Excel file"))
         self.label_26.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:14pt; font-style:italic;\">DiagramDigitizer is an easy-to-use tool </span></p><p><span style=\" font-size:14pt; font-style:italic;\">to extract numerical data from diagrams</span></p><p><span style=\" font-size:14pt; font-style:italic;\">and export them for further use.</span></p></body></html>"))
-        self.label_16.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:14pt;\">Copyright (C) 2016 Michael Fischer</span></p></body></html>"))
+        self.label_16.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:14pt;\">Copyright (C) 2016-2021 Michael Fischer</span></p></body></html>"))
         self.label_13.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-weight:600;\">Zoom:  </span></p></body></html>"))
         self.labelZoomFactor.setText(_translate("MainWindow", "xxx      "))
         self.buttonBack.setText(_translate("MainWindow", "Back"))

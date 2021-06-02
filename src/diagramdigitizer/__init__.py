@@ -8,5 +8,5 @@ from . import utils
 
 def main():
     """Entry point for the application script"""
-    print("Call your main application code here")
+    print("Starting DiagramDigitizer from command line")
     diagramdigitizer.run()

@@ -143,8 +143,7 @@ def exportData_to_excel(filepath, dataDict):
     dataDict : dict
         Data dictionary { str1 : numpy-array1, ...}.
     """
-    #try:
-    if True:
+    try:
         # Open Excel workbook
         workbook = xlsxwriter.Workbook(filepath)
         workbook.add_format({'bold': True})
@@ -214,8 +213,8 @@ def exportData_to_excel(filepath, dataDict):
         # Close Excel workbook
         workbook.close()
 
-    #except OSError as e:
-    #    print("OS ERROR: ", e.errno)
+    except OSError as e:
+        print("OS ERROR: ", e.errno)
 
 
 def exportData_to_fileGen(filepath, dataDict, filetype, procType):
